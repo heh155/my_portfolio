@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asutosh- Developer portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Cabin', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.02rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 80px 0;
+        }
+
+        .firstsection>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            font-size: 2.3rem;
+
+        }
+
+        .leftsection .btn {
+            background-color: #1e2167;
+            color: white;
+            padding: 10px;
+            border: 2px solid white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            padding: 12px;
+
+        }
+
+        .leftsection .btn a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .leftsection .buttons {
+            padding: 50px 0;
+        }
+
+        .rightsection img {
+            width: 100%;
+
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .secondsection {
+            max-width: 50vh;
+            margin-left: 173px;
+            height: 80vh;
+        }
+
+        .secondsection h1 {
+            font-size: 1.9rem;
+        }
+
+        .text-grey {
+            color: grey;
+        }
+
+        .secondsection .box {
+            background: white;
+            width: 160vh;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondsection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+
+            margin: 0 100px;
+
+        }
+
+        .img-top {
+            width: 23px;
+            position: relative;
+            top: -25px;
+            left: -11px;
+        }
+
+        .vertical_text {
+            position: relative;
+            top: 75px;
+            width: 150px;
+        }
+
+        .vertical_desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+        }
+
+        footer {
+            background-color: #0e0e1a;
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 171px;
+        }
+
+        .footer_rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        .skills {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .skill h1 {
+            background: #333;
+
+        }
+
+        .skill h3 {
+            margin: 5px;
+        }
+
+        .skill {
+            width: 500px;
+            margin: 60px auto;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+
+        .skill li {
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        .oo {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+        }
+
+        .ooi {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+        }
+
+        .service {
+            padding-bottom: 50px;
+        }
+
+        .bar {
+            background: #353b48;
+            display: block;
+            height: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        }
+
+        .bar:hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+
+        .bar span {
+            height: 20px;
+            float: left;
+            background: linear-gradient(135deg, rgba(236, 0, 140, 1)0%, rgba(252, 103, 103, 1)100%);
+        }
+
+        .html {
+            width: 90%;
+            animation: html 3s;
+        }
+
+        .css {
+            width: 80%;
+            animation: css 3s;
+        }
+
+        .js {
+            width: 50%;
+            animation: js 3s;
+        }
+
+        .php {
+            width: 40%;
+            animation: php 3s;
+        }
+
+        .reactjs {
+            width: 70%;
+            animation: reactjs 3s;
+        }
+
+        .service h3 {
+            color: gray;
+        }
+
+        .mysql {
+            width: 30%;
+            animation: mysql 3s;
+        }
+
+        .mongodb {
+            width: 50%;
+            animation: mongodb 3s;
+        }
+
+        .nodejs {
+            width: 50%;
+            animation: nodejs 3s;
+        }
+
+        .expressjs {
+            width: 40%;
+            animation: expressjs 3s;
+        }
+
+        .nextjs {
+            width: 60%;
+            animation: nextjs 3s;
+        }
+
+        @keyframes html {
+            0% {
+                width: 0%;
+            }
+
+            90% {
+                width: 90%;
+            }
+
+        }
+
+        @keyframes css {
+            0% {
+                width: 0%;
+            }
+
+            80% {
+                width: 80%;
+            }
+
+        }
+
+        @keyframes js {
+            0% {
+                width: 0%;
+            }
+
+            50% {
+                width: 50%;
+            }
+
+        }
+
+        @keyframes php {
+            0% {
+                width: 0%;
+            }
+
+            40% {
+                width: 40%;
+            }
+
+        }
+
+        @keyframes reactjs {
+            0% {
+                width: 0%;
+            }
+
+            70% {
+                width: 70%;
+            }
+
+        }
+
+        @keyframes mysql {
+            0% {
+                width: 0%;
+            }
+
+            30% {
+                width: 30%;
+            }
+
+        }
+
+        @keyframes mongodb {
+            0% {
+                width: 0%;
+            }
+
+            50% {
+                width: 50%;
+            }
+
+        }
+
+        @keyframes nodejs {
+            0% {
+                width: 0%;
+            }
+
+            50% {
+                width: 50%;
+            }
+
+        }
+
+        @keyframes expressjs {
+            0% {
+                width: 0%;
+            }
+
+            40% {
+                width: 40%;
+            }
+
+        }
+
+        @keyframes nextjs {
+            0% {
+                width: 0%;
+            }
+
+            60% {
+                width: 60%;
+            }
+
+        }
+
+        .project-tab {
+            display: inline-block;
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .project-tab img {
+            width: 200px;
+            height: 150px;
+            border-radius: 5px;
+        }
+
+        .project-tab .project-link {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -10px);
+            opacity: 0;
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .project-tab:hover .project-link {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+        .con33 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+
+        .pro {
+            margin: 100px auto;
+        }
+
+        .pro h1 {
+            width: 500px;
+            margin: 100px auto;
+            color: #fff;
+            padding: 20px;
+            padding-left: 400px;
+        }
+
+        .con34 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+
+        .con35 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+
+        .abt {
+            text-align: justify;
+
+        }
+
+        .about_me {
+            padding: 23px 122px;
+        }
+
+        .education {
+            padding: 23px 122px;
+        }
+
+        .position {
+            padding: 23px 122px;
+        }
+
+        .training {
+            padding: 23px 122px;
+
+        }
+
+        .education h3 {
+            color: rgb(170, 107, 228);
+
+        }
+
+        .education h6 {
+            color: gray;
+        }
+
+        .position h4 {
+            color: rgb(170, 107, 228);
+
+        }
+
+        .training h4 {
+            color: rgb(170, 107, 228);
+
+        }
+
+        .about_me h1 {
+            color: rgb(170, 107, 228);
+
+        }
+
+        #ele {
+            color: rgb(170, 107, 228);
+        }
+
+        .about_me h1 {
+            padding-left: 436px;
+            padding-bottom: 44px;
+            margin-top: -128px;
+        }
+
+        .conb {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(0, 0, 33);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 2vh 4vw;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        form h3 {
+            color: #555;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        form input,
+        form textarea {
+            border: 0;
+            margin: 10px 0;
+            padding: 20px;
+            outline: none;
+            background: #f5f5f5;
+            font-size: 16px;
+        }
+
+        form button {
+            padding: 15px;
+            background: #ff5361;
+            color: #fff;
+            font-size: 18px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            width: 150px;
+            margin: 20px auto 0;
+            border-radius: 30px;
+        }
+
+        form h3 {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .service {
+            text-align: center;
+        }
+
+        .conh {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .oo {
+            padding: 100px;
+            border-radius: 30px;
+        }
+
+        .oo img {
+            width: 60px;
+        }
+
+        .ooi {
+            padding: 100px;
+            border-radius: 30px;
+
+        }
+
+        .ooi img {
+            width: 60px;
+
+        }
+
+        .oo:hover {
+            background-color: blueviolet;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+
+        .ooi:hover {
+            background-color: blueviolet;
+            color: whitesmoke;
+            cursor: pointer;
+
+        }
+
+        .service h1 {
+            padding: 30px;
+        }
+
+        .oo {
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            align-items: center;
+        }
+
+        .ooi {
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            align-items: center;
+        }
+
+        .footer-fourth ul li a {
+            text-decoration: none;
+            color: white;
+            /* font-size: 6px; */
+        }
+
+        .footer-fourth ul li {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Asutosh's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html" target="_blank">About</a>
+                    </li>
+                    <li>
+                        <a href="/">Projects</a>
+                    </li>
+                    <li>
+                        <a href="/">Contact Me</a>
+                    </li>
+                    <li>
+                        <a href="/">Services</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">Hi,My name is <span class="purple">Asutosh</span>
+                <div>And I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn"> <a href="./pdf/ASUTOSHDASH_InternshalaResume (7).pdf">Download
+                            resume</a></button>
+                    <button class="btn"><a href="https://github.com/heh155">Visit GitHub</a></button>
+                </div>
+
+            </div>
+            <div class="rightsection">
+                <img src="./img/photo-1617042375876-a13e36732a04.jpg" alt="">
+            </div>
+        </section>
+        <section class="secondsection">
+            <span class="text-grey">What i have done so far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="img-top" src="./img/reactjsk.jpg" alt="">
+                    <div class="vertical_text">ReactJs</div>
+                    <div class="vertical_desc">React utilizes a component-based approach, where the user interface is
+                        divided into reusable, self-contained components. This modular structure promotes code
+                        reusability, maintainability, and scalability. Developers can build complex applications by
+                        composing smaller, independent components.</div>
+                </div>
+                <div class="vertical">
+                    <img class="img-top" src="./img/nodejsk.png" alt="">
+                    <div class="vertical_text">NodeJs</div>
+                    <div class="vertical_desc">Node.js enables developers to use JavaScript on both the front-end and
+                        the back-end. This eliminates the need to switch between different programming languages,
+                        resulting in improved developer productivity and code reusability.</div>
+                </div>
+                <div class="vertical">
+                    <img class="img-top" src="./img/nextjsk.png" alt="">
+                    <div class="vertical_text">NextJs</div>
+                    <div class="vertical_desc">Next.js combines the power of server-rendered React, static site
+                        generation, and a streamlined development experience. It's an excellent choice for building
+                        performant, SEO-friendly, and scalable applications, especially for projects that require server
+                        rendering or static site generation capabilities.</div>
+                </div>
+                <div class="vertical">
+                    <img class="img-top" src="./img/expressjsk.png" alt="">
+                    <div class="vertical_text">ExpressJs</div>
+                    <div class="vertical_desc">Express.js is a powerful, lightweight, and flexible framework that
+                        simplifies the process of building web applications with Node.js. Its simplicity, modularity,
+                        and extensive ecosystem make it a popular choice for developers looking for a solid foundation
+                        to create robust and scalable web applications.</div>
+                </div>
+                <div class="vertical">
+                    <img class="img-top" src="./img/mongoDb.png" alt="">
+                    <div class="vertical_text">MongoDB</div>
+                    <div class="vertical_desc">MongoDB's combination of flexible data modeling, scalability,
+                        performance, and developer-friendly features makes it a compelling choice for many applications.
+                        It is particularly suitable for scenarios involving large-scale, dynamic, and evolving data
+                        requirements, such as content management systems, real-time analytics, IoT applications, and
+                        social networks.</div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+    <section class="abt">
+        <div class="about_me">
+            <h1>
+                ->
+                <span id="ele"></span>
+            </h1>
+            <div class="conh">
+                <div class="oo">
+                    <p>Welcome to My Website!.<br> I am web developers dedicated to creating customized, cutting-edge
+                        web
+                        solutions.
+                        From
+                        stunning websites to robust web applications, I deliver exceptional results. Let's build
+                        something
+                        amazing
+                        together!</p>
+                </div>
+
+            </div>
+            <div class="conh">
+
+                <div class="ooi">
+                    <h4>B.Tech, Computer Science And Communication Eng.</h4>
+                    <p>Kalinga Institute Of Industrial Technology <br>2021 - 2025<br> CGPA: 8.56/10</p>
+
+                </div>
+                <div class="ooi">
+                    <h3>Senior Secondary (XII, Science)</h3>
+                    <p>BURNPUR RIVERSIDE SCHOOL
+                        (CBSE board)<br>Year of completion: 2021<br> Percentage: 91.00%</p>
+
+                </div>
+            </div>
+            <div class="conh">
+                <div class="oo">
+                    <h4>POSITIONS OF RESPONSIBILITY</h4>
+                    <p>FRONTEND DEVELOPER AT KONNECTIONS (IT AND WEB SOCIETY AT KIIT).</p>
+                </div>
+                <div class="ooi">
+                    <h4>TRAININGS</h4>
+                    <p>GEEKS FOR GEEKS SELF PLACED COURSE<br> Geeks for geeks, Online<br> Sep 2022 - Present</p>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Thank you for considering My Website as your web development partner. I look forward to working with
+                    you
+                    and
+                    helping you achieve your digital goals. Feel free to browse through my portfolio and contact us to
+                    discuss
+                    your next web development project. Let's create something amazing together!</p>
+            </div>
+    </section>
+    <section class="skills">
+        <div class="skill">
+            <h1>Skills</h1>
+            <li>HTML</li>
+            <span class="bar"><span class="html"></span></span>
+            <li>CSS</li>
+            <span class="bar"><span class="css"></span></span>
+            <li>JavaScript</li>
+            <span class="bar"><span class="js"></span></span>
+            <li>php</li>
+            <span class="bar"><span class="php"></span></span>
+            <li>ReactJs</li>
+            <span class="bar"><span class="reactjs"></span></span>
+            <li>MySQL</li>
+            <span class="bar"><span class="mysql"></span></span>
+            <li>MongoDb</li>
+            <span class="bar"><span class="mongodb"></span></span>
+            <li>Nodejs</li>
+            <span class="bar"><span class="nodejs"></span></span>
+            <li>Expressjs</li>
+            <span class="bar"><span class="expressjs"></span></span>
+            <li>NextJs</li>
+            <span class="bar"><span class="nextjs"></span></span>
+        </div>
+    </section>
+
+    <section class="pro">
+        <h1>Projects</h1>
+        <div class="con33">
+            <div class="project-tab">
+                <img src="./img/music.png" alt="Project Image">
+                <a href="https://music-player-jet-seven.vercel.app/" target="_blank" class="project-link">Visit now</a>
+            </div>
+            <div class="project-tab">
+                <img src="./img/apj.png" alt="Project Image">
+                <a href="https://tribute-webpage.vercel.app/" target="_blank" class="project-link">Visit now</a>
+            </div>
+        </div>
+        <div class="con34">
+            <div class="project-tab">
+                <img src="./img/hotel.png" alt="Project Image">
+                <a href="https://hotel-webpage.vercel.app/" target="_blank" class="project-link">Visit now</a>
+            </div>
+            <div class="project-tab">
+                <img src="./img/landing page.png" alt="Project Image">
+                <a href="https://landing-page-opal-mu.vercel.app/" target="_blank" class="project-link">Visit now</a>
+            </div>
+        </div>
+        <div class="con35">
+            <div class="project-tab">
+                <img src="./img/mytunes.png" alt="Project Image">
+                <a href="https://music-website-two.vercel.app/" target="_blank" class="project-link">Visit now</a>
+            </div>
+            <div class="project-tab">
+                <img src="./img/paralledx.png" alt="Project Image">
+                <a href="https://paralex-website.vercel.app/" target="_blank" class="project-link">Visit now</a>
+            </div>
+        </div>
+
+    </section>
+    <section class="service">
+        <h1>Services</h1>
+        <h3>Some of the services i can offer</h3>
+        <div class="conh">
+            <div class="oo">
+                <img src="./img/th.jpeg" alt="">
+                <h2>WEB DESIGN</h2>
+            </div>
+            <div class="ooi">
+                <img src="./img/thf.jpeg" alt="">
+                <h2>WEB DEVELOPER</h2>
+            </div>
+        </div>
+    </section>
+    <div class="conb">
+        <form action="https://formspree.io/f/xvonnlnl" method="POST">
+            <h3>Contact Me</h3>
+            <input type="text" name="name" id="name" placeholder="Your Name">
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="text" name="phnno." id="phnno." placeholder="Phone no.">
+            <textarea name="message" id="message" cols="15" rows="5" placeholder="How May I Help You"></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Asutosh's Developer portfolio</h3>
+            </div>
+
+
+            <div class="footer-fourth">
+                <ul>
+                    <li><a href="https://github.com/heh155" target="_blank">Github</a></li>
+                    <li><a href="https://vercel.com/heh155" target="_blank">Vercel</a></li>
+                    <li><a href="https://www.linkedin.com/in/asutosh-dash-27892b239/" target="_blank">LinkedIn</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer_rights">
+            <p>www.asutoshportfolio.com|All rights revesed</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', '&amp;Web Designer'],
+            typeSpeed: 50,
+        });
+        var typed = new Typed('#ele', {
+            strings: ['About Me!'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
